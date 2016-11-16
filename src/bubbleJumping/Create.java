@@ -58,16 +58,12 @@ public class Create extends JPanel {
            
               
               if(checkdieC.Die()==true){ 
-                  g.setColor(Color.white);
-                  g.fillRect(100, 175, 300, 175); 
-                  gameover = ImageIO.read(new File("C:\\res\\GameOver.png"));
+                  gameover = ImageIO.read(new File("C:\\res\\scoreboard.png"));
                   g.drawImage(gameover, 120, 175, null);
-                  g.setColor(Color.decode("#FFCC00"));
-                  g.setFont(new Font("Arial",Font.BOLD,20));
-                  g.drawString("SCORE", 210, 260);
-                  g.setFont(new Font("Arial",Font.BOLD, 50));
-                  if(scoreC.getPoint()<10) g.drawString(""+scoreC.getPoint(),235, 305);
-                  else g.drawString(""+scoreC.getPoint(),217, 310);
+                  g.setColor(Color.white);
+                  g.setFont(new Font("Arial",Font.BOLD, 20));
+                  if(scoreC.getPoint()<10) g.drawString(""+scoreC.getPoint(),305, 296);
+                  else g.drawString(""+scoreC.getPoint(),299, 296);
                   g.setColor(Color.black);
                   g.setFont(new Font("Arial",Font.BOLD,15));
                   g.drawString("ESC to exit, R to return game",150, 450);

@@ -61,7 +61,7 @@ public BackGround(){
     
    }
 
-
+  
 public static void main(String[]args){
    
         BackGround bg =new BackGround();
@@ -75,7 +75,10 @@ public static void main(String[]args){
          if(b1){
                 pipeB.XDown(); 
                 pipeB.repeat();
-                birdB.YUp();}
+                birdB.YUp();
+               
+        
+         }
          
         
         try {
