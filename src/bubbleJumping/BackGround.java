@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 public class BackGround extends JFrame implements Runnable{
      
      private Create createB= new Create(); //Create Objects in Create class
-     private Bubble bubbleB = new Bubble ();
+     private Bird birdB = new Bird();
      private Pipe pipeB= new Pipe();
      private Score scoreB=new Score();
      private CheckDie checkdieB = new CheckDie();
@@ -41,7 +41,7 @@ public BackGround(){
         @Override
         public void keyTyped(KeyEvent e) {
             char key = e.getKeyChar();
-            if(key==32&&checkdieB.Die()==false) bubbleB.YDown();
+            if(key==32&&checkdieB.Die()==false) birdB.YDown();
             
         }
 
@@ -75,7 +75,7 @@ public static void main(String[]args){
          if(b1){
                 pipeB.XDown(); 
                 pipeB.repeat();
-                bubbleB.YUp();}
+                birdB.YUp();}
          
         
         try {
@@ -100,7 +100,7 @@ public static void main(String[]args){
                     else  if(e.getKeyChar()=='R'||e.getKeyChar()=='r'){
                     
                     
-                    bubbleB.update1();// đặt lại tọa đô chim về ban đầu
+                    birdB.update1();// đặt lại tọa đô chim về ban đầu
                     
                     pipeB.update2();// đặt lại tọa độ ống nước về ban đầu
                     

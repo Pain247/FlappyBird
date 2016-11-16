@@ -23,7 +23,7 @@ import javax.swing.JPanel;
  */
 public class Intro extends JFrame {
      private BufferedImage it;
-     private Bubble bubbleI= new Bubble();
+     private Bird birdI= new Bird();
     
     public void paint(Graphics g){
         

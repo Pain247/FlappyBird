@@ -23,7 +23,7 @@ import javax.swing.JPanel;
  */
 public class Create extends JPanel {
     
-    private Bubble bubbleC= new Bubble();
+    private Bird birdC= new Bird();
     private Pipe pipeC =new Pipe();
     private CheckDie checkdieC = new CheckDie();
     private Score scoreC= new Score();
@@ -42,7 +42,7 @@ public class Create extends JPanel {
             floor=ImageIO.read(new File("C:\\res\\NenDat.png"));
             g.drawImage(floor,0, 390, null);
             
-            bubbleC.paint(g);
+            birdC.paint(g);
             
            
             g.setColor(Color.black);

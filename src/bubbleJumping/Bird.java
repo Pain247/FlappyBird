@@ -19,7 +19,7 @@ import javax.swing.JPanel;
  *
  * @author Dell
  */
-public class Bubble{
+public class Bird{
     private static int y=200;
     private static int x=100;
   
@@ -35,7 +35,7 @@ public class Bubble{
            bubble= ImageIO.read(new File("C:\\Users\\Dell\\Desktop\\bird\\bird-04.png"));
             g.drawImage(bubble, x, y,null);
         } catch (IOException ex) {
-            Logger.getLogger(Bubble.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Bird.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     public void YUp(){
