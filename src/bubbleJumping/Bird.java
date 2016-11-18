@@ -7,7 +7,9 @@ package bubbleJumping;
  */
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.awt.image.ImageObserver;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -44,7 +46,7 @@ public class Bird{
     
     return list;
     }
- 
+    
 
 
    public void paint(Graphics g){
@@ -55,6 +57,7 @@ public class Bird{
         if(index==3) index=0;
        
     }
+
     public void YUp(){
         y=y+1;
     }

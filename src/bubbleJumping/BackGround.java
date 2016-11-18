@@ -6,6 +6,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.ImageObserver;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -16,16 +17,16 @@ import javax.swing.JOptionPane;
  * @author Dell
  */
 public class BackGround extends JFrame implements Runnable{
-     
+ 
      private Create createB= new Create(); //Create Objects in Create class
      private Bird birdB = new Bird();
      private Pipe pipeB= new Pipe();
      private Score scoreB=new Score();
-     private CheckDie checkdieB = new CheckDie();
+     private Collision collisionB = new Collision();
      private static boolean  b1=true;
      private Thread threadB;
 public BackGround(){
-    
+
     setTitle("Bubble Jumping");
     setSize(500, 500);// Create a window 500x500
     setVisible(true);// 
@@ -41,7 +42,9 @@ public BackGround(){
         @Override
         public void keyTyped(KeyEvent e) {
             char key = e.getKeyChar();
-            if(key==32&&checkdieB.Die()==false) birdB.YDown();
+            if(key==32&&collisionB.Die()==false) {
+                birdB.YDown();
+            }
             
         }
 
@@ -88,8 +91,9 @@ public static void main(String[]args){
         }
       
         
-        if(checkdieB.Die()==true){   
+        if(collisionB.Die()==true){   
             b1=false; 
+           
             addKeyListener(new KeyAdapter() {
                 @Override
                 public void keyTyped(KeyEvent e) {
@@ -111,6 +115,7 @@ public static void main(String[]args){
                     
                     b1=true;
                     
+                    createB.setK(1);
                     
                     }
                    

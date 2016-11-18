@@ -6,7 +6,7 @@ package bubbleJumping;
  * @author Dell
  */
 
-public class CheckDie{
+public class Collision{
     
     private Bird birdCh= new Bird();
     private Pipe pipeCh= new Pipe();
