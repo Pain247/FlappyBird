@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Dell
+ * @author D
  */
 public class Pipe extends JPanel {
     

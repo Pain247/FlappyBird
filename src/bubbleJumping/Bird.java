@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Dell
+ * @author D
  */
 public class Bird{
     private static int y=200;
@@ -28,6 +28,7 @@ public class Bird{
     private BufferedImage bird;
     private BufferedImage [] list = new BufferedImage[4];
     private BufferedImage [] list1 = new BufferedImage[4];
+    
     public static int getY(){
         return y;
     }
@@ -64,6 +65,7 @@ public class Bird{
     public void YDown(){
         y=y-40;
     }
+    
     public void update1(){
     x=100;
     y=200;

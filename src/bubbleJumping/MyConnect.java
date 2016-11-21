@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Dell
+ * @author D
  */
 public class MyConnect {
     private final String className="com.mysql.jdbc.Driver";
@@ -32,9 +32,9 @@ public class MyConnect {
             connection = (Connection) DriverManager.getConnection(url,user,pass);
             System.out.println("Successful connect");
         } catch (ClassNotFoundException ex) {
-            System.out.println("class not found");
+            System.out.println("class not found"+ex.toString());
         } catch (SQLException ex) {
-            System.out.println("Error connection"); 
+            System.out.println("Error connection"+ex.toString()); 
         }
 
       

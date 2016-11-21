@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Dell
+ * @author D
  */
 public class Intro extends JFrame {
      private BufferedImage it;

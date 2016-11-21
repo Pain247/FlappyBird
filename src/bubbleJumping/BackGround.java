@@ -2,11 +2,13 @@
 package bubbleJumping;
 
 import java.awt.Component;
+import static java.awt.PageAttributes.MediaType.C;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.ImageObserver;
+import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -14,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Dell
+ * @author D
  */
 public class BackGround extends JFrame implements Runnable{
  
@@ -25,6 +27,7 @@ public class BackGround extends JFrame implements Runnable{
      private Collision collisionB = new Collision();
      private static boolean  b1=true;
      private Thread threadB;
+     private SoundPlayer die,wing;
 public BackGround(){
 
     setTitle("Bubble Jumping");
@@ -34,8 +37,10 @@ public BackGround(){
     setLocation(400, 100); 
     setResizable(false);
     add(createB);// add createB Object to BackGround Class
-    
-    
+    die = new SoundPlayer(new File("C:\\Users\\Dell\\Documents\\NetBeansProjects\\BubbleJumping\\sounds\\bup.wav"));
+    wing = new SoundPlayer(new File("C:\\Users\\Dell\\Documents\\NetBeansProjects\\BubbleJumping\\sounds\\flap.wav"));
+ 
+   
     
     //If press SPACE and bubble hasn't broken
     addKeyListener(new KeyAdapter() {
@@ -44,6 +49,8 @@ public BackGround(){
             char key = e.getKeyChar();
             if(key==32&&collisionB.Die()==false) {
                 birdB.YDown();
+                wing.play();
+                
             }
             
         }
@@ -92,7 +99,10 @@ public static void main(String[]args){
       
         
         if(collisionB.Die()==true){   
+            if(b1) die.play();
             b1=false; 
+           
+            
            
             addKeyListener(new KeyAdapter() {
                 @Override

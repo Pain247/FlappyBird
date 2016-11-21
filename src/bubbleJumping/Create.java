@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Dell
+ * @author D
  */
 public class Create extends JPanel {
     
