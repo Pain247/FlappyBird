@@ -3,7 +3,7 @@ package bubbleJumping;
 
 /**
  *
- * @author Dell
+ * @author D
  */
 import java.awt.Color;
 import java.awt.Graphics;
@@ -24,7 +24,7 @@ import javax.swing.JPanel;
 public class Bird{
     private static int y=200;
     private static int x=100;    
-    private int index=0;
+        private int index=0;
     private BufferedImage bird;
     private BufferedImage [] list = new BufferedImage[4];
     private BufferedImage [] list1 = new BufferedImage[4];

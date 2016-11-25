@@ -23,9 +23,7 @@ public class MyConnect {
     private Connection connection;
     private final String user="root";
     private final String pass="0304";
-    private String table = "score";
     private int max ;
-    private Score scoreM = new Score();
     public void connect(){
         try {
             Class.forName(className);

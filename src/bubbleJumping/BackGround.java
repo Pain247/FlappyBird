@@ -30,7 +30,7 @@ public class BackGround extends JFrame implements Runnable{
      private SoundPlayer die,wing;
 public BackGround(){
 
-    setTitle("Bubble Jumping");
+    setTitle("Flappy Bird");
     setSize(500, 500);// Create a window 500x500
     setVisible(true);// 
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

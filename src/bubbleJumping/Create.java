@@ -73,12 +73,12 @@ public class Create extends JPanel {
                   g.drawString("ESC to exit, R to return game",150, 450);
                   
                   //Set medal
-                  if(scoreC.getPoint()>=10){g.setColor(Color.decode("#FFCC00"));
-                  g.fillOval(150, 290, 45, 45);}
+                  if(scoreC.getPoint()<10){g.setColor(Color.decode("#FFCC00"));
+                  g.fillOval(152, 288, 45, 45);}
                   else if(scoreC.getPoint()>=20){g.setColor(Color.decode("#EEEEEE"));
-                  g.fillOval(150, 290, 45, 45);}
+                  g.fillOval(152, 288, 45, 45);}
                   else if(scoreC.getPoint()>=30){g.setColor(Color.decode("#FFFF33"));
-                  g.fillOval(150, 290, 45, 45);}
+                  g.fillOval(152, 288, 45, 45);}
                   
                   //set HighScore
                 

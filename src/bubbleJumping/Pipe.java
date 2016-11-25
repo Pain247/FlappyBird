@@ -3,7 +3,7 @@ package bubbleJumping;
 
 /**
  *
- * @author Dell
+ * @author D
  */
 import java.awt.Color;
 import java.awt.Graphics;

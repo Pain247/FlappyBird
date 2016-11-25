@@ -12,8 +12,7 @@ public class Collision{
     
     private Bird birdCh= new Bird();
     private Pipe pipeCh= new Pipe();
-    private Score scoreCh = new Score();
-    private SoundPlayer hit = new SoundPlayer(new File("C:\\Users\\Dell\\Documents\\NetBeansProjects\\BubbleJumping\\sounds\\bup.wav"));
+
     public boolean Die(){
         
         if(birdCh.getY()+24>=392) return true;
