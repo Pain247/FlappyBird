@@ -27,9 +27,9 @@ public class Create extends JPanel {
     public BufferedImage bg, floor, gameover;
     private MyConnect connectC = new MyConnect();
     private int k =1;
+    private int a = 0; 
     public Create(){
     connectC.connect();
-    
     }
     @Override
     public void paint(Graphics g){
@@ -46,8 +46,8 @@ public class Create extends JPanel {
            
             g.setColor(Color.black);
             g.setFont(new Font("Arial",Font.BOLD, 15));
-            g.drawString("Press N to new game, SPACE to play",130, 430);
-                  
+            if(a==0){g.drawString("Press N to new game, SPACE to play",130, 430);}
+            if(collisionC.Die()) a=1;      
             g.setColor(Color.white);
             g.setFont(new Font(Font.SANS_SERIF,Font.BOLD,80));
             if(scoreC.getPoint()<10) g.drawString(""+scoreC.getPoint(),220, 85);
@@ -70,10 +70,11 @@ public class Create extends JPanel {
                   else g.drawString(""+scoreC.getPoint(),299, 296);
                   g.setColor(Color.black);
                   g.setFont(new Font("Arial",Font.BOLD,15));
-                  g.drawString("ESC to exit, R to return game",150, 450);
+                  g.drawString("ESC to exit, P to play again",150, 435);
+                  
                   
                   //Set medal
-                  if(scoreC.getPoint()<10){g.setColor(Color.decode("#FFCC00"));
+                  if(scoreC.getPoint()>=10){g.setColor(Color.decode("#FFCC00"));
                   g.fillOval(152, 288, 45, 45);}
                   else if(scoreC.getPoint()>=20){g.setColor(Color.decode("#EEEEEE"));
                   g.fillOval(152, 288, 45, 45);}

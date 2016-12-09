@@ -28,6 +28,7 @@ public class BackGround extends JFrame implements Runnable{
      private static boolean  b1=true;
      private Thread threadB;
      private SoundPlayer die,wing;
+     private boolean isFall = true;
 public BackGround(){
 
     setTitle("Flappy Bird");
@@ -83,8 +84,8 @@ public static void main(String[]args){
         while(true){
         repaint();
          if(b1){
-                pipeB.XDown(); 
-                pipeB.repeat();
+              if(isFall){ pipeB.XDown(); 
+                pipeB.repeat();}
                 birdB.YUp();
                
         
@@ -99,12 +100,13 @@ public static void main(String[]args){
       
         
         if(collisionB.Die()==true){   
-            if(b1) die.play();
-            b1=false; 
-           
+            if(isFall) die.play();
+                 birdB.YUp();
+                 isFall = false;
             
            
-            addKeyListener(new KeyAdapter() {
+            
+              addKeyListener(new KeyAdapter() {
                 @Override
                 public void keyTyped(KeyEvent e) {
                     if(e.getKeyChar()==27){
@@ -114,7 +116,7 @@ public static void main(String[]args){
                  JOptionPane.showMessageDialog(frame, "Exit game?");
                  System.exit(0);
                     }
-                    else  if(e.getKeyChar()=='R'||e.getKeyChar()=='r'){
+                    else  if(e.getKeyChar()=='P'||e.getKeyChar()=='p'){
                     
                     
                     birdB.update1();// đặt lại tọa đô chim về ban đầu
@@ -124,7 +126,7 @@ public static void main(String[]args){
                     scoreB.update3();// đặt lại diem=0;
                     
                     b1=true;
-                    
+                    isFall = true;
                     createB.setK(1);
                     
                     }

@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 public class Pipe extends JPanel {
     
     private static int x1=500, x2=x1+180,x3=x2+180;  
-    private static int h1,h2,h3,h4;
+    private static int h1,h2,h3;
     private static boolean b1=false;
     private static boolean b2=false;
     private static boolean b3=false;

@@ -22,14 +22,15 @@ import javax.swing.JPanel;
  * @author D
  */
 public class Bird{
-    private static int y=200;
+    private static float y=200f;
     private static int x=100;    
-        private int index=0;
+    private int index=0;
+    private float vt = 0;
     private BufferedImage bird;
     private BufferedImage [] list = new BufferedImage[4];
     private BufferedImage [] list1 = new BufferedImage[4];
     
-    public static int getY(){
+    public static float getY(){
         return y;
     }
     public static int getX(){
@@ -53,22 +54,24 @@ public class Bird{
    public void paint(Graphics g){
         list1= Img(); 
         bird = list1[index];
-        g.drawImage(bird, x, y,null);
+        g.drawImage(bird, x, (int) y,null);
         index++;
         if(index==3) index=0;
        
     }
 
     public void YUp(){
-        y=y+1;
+        vt+=0.089;
+        y=this.getY() + vt ;
     }
     public void YDown(){
-        y=y-40;
+      this.vt =-3.2f;
     }
     
     public void update1(){
     x=100;
     y=200;
+    this.vt =0;
     }
 
 }
